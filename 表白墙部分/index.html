@@ -2,25 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
     <title>红娘主页</title>
     <style type="text/css">
         div{
             width:100%;
-            background-color: blanchedalmond;
+            background-color: whitesmoke;
             margin-top: 5px;
+            -webkit-font-smoothing: antialiased;
+            font-family: Calibri;
         }
         #wrapper{
-            background-color: darkgrey;
-            width:960px;
-            height: 1000px;
+            background-color: #666666;
+            max-width:480px;
             margin: 0px auto;
         }
         #search_box{
             background-color: #F29C9C;
-            background-image: url("img/search.png");
+            background-image: url("img/search-pink.png");
             background-repeat: no-repeat;
-            background-size: 2%;
+            background-size: 4%;
+            background-position-y: 25%;
         }
         #search_box1{
             margin-left: 20px;
@@ -28,8 +29,40 @@
         }
         #header{
             text-align: -webkit-center;
-
-
+        }
+        .face-m{
+            width: 60px;
+            height:60px;
+            background-image: url("img/account.png");
+            background-repeat: no-repeat;
+            background-position-x: 40%;
+            border-radius: 50%;
+            background-color: #999999;
+        }
+        .face-fm{
+            width: 60px;
+            height:60px;
+            background-image: url("img/account (1).png");
+            background-repeat: no-repeat;
+            background-position-x: 40%;
+            border-radius: 50%;
+            background-color: #999999;
+        }
+        .face-m {
+            float:left;
+        }
+        .face-fm{
+            float: left;
+        }
+        .menu{
+            width:160px;
+            text-align: -webkit-center;
+        }
+        #ad-content{
+            width: 200px;
+        }
+        #ad-icon{
+            display: inline;
         }
 
     </style>
@@ -37,27 +70,72 @@
 <body>
 <div id="wrapper">
     <div id="search_box">
-        <input type="text" placeholder="find a boy" id="search_box1">
+        <input type="text" placeholder="搜索 如：计院小哥哥" id="search_box1">
     </div>
     <div id="biaobaiqiang">
         <div id="header">表白墙</div>
         <div id="a1">
-
-
+            <div id="a11">
+                <div class="face-fm" id="face-fm1">
+                </div>
+                <div class="name" id="name1" >丽丽 计算机学院</div>
+                <div class="time" id="time1">1分钟前</div>
+                <div class="follow">关注</div>
+                <div class="content">表白理学院17级的张三小哥哥，见过一次面后念念不忘。</div>
+            </div>
+            <span class="like">1</span>
+            <span class="comment">1</span>
         </div>
         <div id="a2">
+            <div id="a21">
+                <div class="face-m"></div>
+                <div class="name">匿名用户</div>
+                <div class="time">35分钟前</div>
+                <div class="follow">已关注</div>
+                <div class="content">为舍友征大姐姐，小姐姐……
+                    舍友比较可爱，之前去美国交流被一个小姐姐伤心，都有点不相信爱情了。</div>
+            </div>
+            <span class="like">246</span>
+            <span class="comment">23</span>
 
         </div>
+        <div id="bbq-footer">查看更多</div>
     </div>
     <div id="ad">
-            <li>广告</li>
-            <li>广告</li>
-            <li>广告</li>
+        <img src="img/ad.jpg" alt="" width="480px">
+        <div id="ad-content">
+            <p>COCO CRUSH</p>
+            <br>
+            <p>CHANEL Ltd.</p>
+        </div>
+        <div id="ad-icon">ad</div>
+        <div id="menu">
+            <span class="menu">分享</span>
+            <span class="menu">17</span>
+            <span class="menu">246</span>
+        </div>
     </div>
     <div id="friends">
-            <li>张三</li>
-            <li>李四</li>
-            <li>王五</li>
+        <div id="friends-header">可能认识的人</div>
+        <div class="friends">
+            <div class="face-fm"></div>
+            <div class="name">昵称不会取</div>
+            <div class="college">计算机学院</div>
+            <div class="follow"></div>
+        </div>
+        <div class="friends">
+            <div class="face-m"></div>
+            <div class="name">取什么名字呢</div>
+            <div class="college">文法学院</div>
+            <div class="follow"></div>
+        </div>
+        <div class="friends">
+            <div class="face-m"></div>
+            <div class="name">取这个名字吧</div>
+            <div class="college">外国语学院</div>
+            <div class="follow"></div>
+        </div>
+        <div id="friends-footer">查看更多</div>
     </div>
 </div>
 </body>

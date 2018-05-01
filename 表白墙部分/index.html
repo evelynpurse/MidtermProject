@@ -2,67 +2,262 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
     <title>红娘主页</title>
     <style type="text/css">
         div{
             width:100%;
             background-color: whitesmoke;
-            margin-top: 5px;
             -webkit-font-smoothing: antialiased;
+            margin-top: 3%;
             font-family: Calibri;
+            border-radius: 3px 3px 3px 3px;
+            opacity: 0.9;
         }
         #wrapper{
-            background-color: #666666;
+            position: relative;
+            top: 0px;
+            background-color: white;
             max-width:480px;
             margin: 0px auto;
+        }
+        #wrapper1{
+            overflow: hidden;
+            position: relative;
+            background-color: #B3B3B3;
+            margin-top: 50px;
+            opacity: 1;
         }
         #search_box{
             background-color: #F29C9C;
             background-image: url("img/search-pink.png");
             background-repeat: no-repeat;
             background-size: 4%;
-            background-position-y: 25%;
+            background-position-y: 50%;
+            background-position-x: 15%;
+            position: fixed;
+            z-index: 5;
+            top: 0px;
+            width: 480px;
+            height: 35px;
+            border-radius:5px 5px 5px 5px;
+            opacity: 1;
         }
         #search_box1{
-            margin-left: 20px;
-            width:90%;
+            width:60%;
+            background-color: ghostwhite;
+            opacity: 0.8;
+            margin-top: 1.5%;
+            margin-left: 20%;
         }
+        #biaobaiqiang{
+            margin-top: 0px;
+            opacity: 1;
+        }
+
         #header{
+            font-size: large;
             text-align: -webkit-center;
+            line-height: 110%;
+            padding-top: 2%;
+            background-image: url("img/more_unfold.png");
+            background-repeat: no-repeat;
+            background-size: 8%;
+            background-position-x: 95%;
+            font-weight: bolder;
         }
         .face-m{
             width: 60px;
             height:60px;
             background-image: url("img/account.png");
             background-repeat: no-repeat;
-            background-position-x: 40%;
+            background-position-x: 43%;
             border-radius: 50%;
-            background-color: #999999;
+            background-color: white;
+            opacity: 1;
         }
         .face-fm{
             width: 60px;
             height:60px;
             background-image: url("img/account (1).png");
             background-repeat: no-repeat;
-            background-position-x: 40%;
+            background-position-x: 43%;
             border-radius: 50%;
-            background-color: #999999;
+            background-color: white;
+            opacity: 1;
         }
-        .face-m {
-            float:left;
+        .name{
+            width: 200px;
+            position: relative;
+            bottom: 80px;
+            left: 70px;
+            font-weight: bolder;
+            background-color: unset;
+            opacity: 1;
         }
-        .face-fm{
-            float: left;
+        .time{
+            width: 100px;
+            position: relative;
+            bottom: 80px;
+            left: 70px;
+            background-color: unset;
+            opacity: 1;
+            font-size: 14px;
+        }
+        .to-follow{
+            position: relative;
+            bottom: 150px;
+            left: 400px;
+            color: #F29C9C;
+            padding-left: 5%;
+            background-color: unset;
+            opacity: 1;
+            background-image: url("img/add.png");
+            background-repeat: no-repeat;
+            background-size: 5%;
+        }
+        .followed{
+            position: relative;
+            bottom: 150px;
+            left: 400px;
+            color: #F29C9C;
+            padding-left: 5%;
+            background-color: unset;
+            opacity: 1;
+            background-image: url("img/selected.png");
+            background-repeat: no-repeat;
+            background-size: 5%;
+        }
+        .content{
+            position: relative;
+            bottom: 115px;
+            left: 70px;
+            width: 350px;
+            background-color: unset;
+            opacity: 1;
+            font-size: 16px;
+        }
+        .like{
+            position: relative;
+            bottom: 10px;
+            background-image: url("img/favorites.png");
+            background-size: 8%;
+            background-position-x: 5%;
+            background-repeat: no-repeat;
+            width: 240px;
+            display: inline-block;
+            padding-left: 10%;
+        }
+        .comment{
+            position: relative;
+            bottom: 10px;
+            background-image: url("img/comments.png");
+            background-size: 35%;
+            background-position-x: 5%;
+            background-position-y: 5%;
+            background-repeat: no-repeat;
+            padding-left: 10%;
+            display: inline-block;
+        }
+        #bbq-footer{
+            text-align: -webkit-center;
+            padding-bottom: 3%;
+            color: #F29C9C;
+            font-weight: bolder;
+        }
+        #ad-icon{
+            position: relative;
+            bottom: 40px;
+            left: 400px;
+            background-image: url("img/discount.png");
+            background-size: 4%;
+            background-repeat: no-repeat;
+            background-position-x: 10%;
         }
         .menu{
-            width:160px;
+            display: inline-block;
+            width:120px;
             text-align: -webkit-center;
+        }
+        #menu{
+            position: relative;
+            bottom: 10px;
+        }
+        #menu-share{
+            background-image: url("img/share.png");
+            background-size: 17% ;
+            background-repeat: no-repeat;
+            background-position-x: 20% ;
+        }
+        #menu-like{
+            background-image: url("img/favorites.png");
+            background-size: 17% ;
+            background-repeat: no-repeat;
+            background-position-x: 20% ;
+
+        }
+        #menu-comment{
+            background-image: url("img/comments.png");
+            background-size: 17% ;
+            background-repeat: no-repeat;
+            background-position-x: 20% ;
         }
         #ad-content{
             width: 200px;
         }
-        #ad-icon{
-            display: inline;
+        p{
+            margin: 0px auto;
+            font-size: 18px;
+            font-weight: bolder;
+        }
+        #friends-header{
+            font-size: large;
+            text-align: -webkit-center;
+            line-height: 110%;
+            padding-top: 2%;
+            background-image: url("img/more_unfold.png");
+            background-repeat: no-repeat;
+            background-size: 8%;
+            background-position-x: 95%;
+        }
+        #friends-footer{
+            text-align: -webkit-center;
+            padding-bottom: 3%;
+            color: #F29C9C;
+            font-weight: bolder;
+            position: relative;
+            bottom:300px;
+        }
+        .college{
+            position: relative;
+            left:70px;
+            bottom: 90px;
+        }
+        #friends2{
+            position: relative;
+            bottom:100px;
+        }
+        #friends3{
+            position: relative;
+            bottom:200px;
+        }
+        #bottom-line{
+            position: relative;
+            bottom: 300px;
+        }
+        #friends{
+            height: 340px
+        }
+        #add-bb{
+            position: fixed;
+            bottom: 0px;
+            left: 50%;
+            width: 50px;
+            height:50px;
+            background-position-x: 43%;
+            border-radius: 50%;
+            background: tomato url("img/add.png") no-repeat;
+            opacity: 0.8;
         }
 
     </style>
@@ -71,72 +266,76 @@
 <div id="wrapper">
     <div id="search_box">
         <input type="text" placeholder="搜索 如：计院小哥哥" id="search_box1">
+        <input type="submit">
     </div>
-    <div id="biaobaiqiang">
-        <div id="header">表白墙</div>
-        <div id="a1">
-            <div id="a11">
+    <div id="wrapper1">
+        <div id="biaobaiqiang">
+            <div id="header">表白墙</div>
+            <hr>
+            <div id="a1">
                 <div class="face-fm" id="face-fm1">
                 </div>
                 <div class="name" id="name1" >丽丽 计算机学院</div>
                 <div class="time" id="time1">1分钟前</div>
-                <div class="follow">关注</div>
+                <div class="to-follow">关注</div>
                 <div class="content">表白理学院17级的张三小哥哥，见过一次面后念念不忘。</div>
             </div>
             <span class="like">1</span>
             <span class="comment">1</span>
-        </div>
-        <div id="a2">
-            <div id="a21">
+            <hr>
+            <div id="a2">
                 <div class="face-m"></div>
                 <div class="name">匿名用户</div>
                 <div class="time">35分钟前</div>
-                <div class="follow">已关注</div>
+                <div class="followed">已关注</div>
                 <div class="content">为舍友征大姐姐，小姐姐……
                     舍友比较可爱，之前去美国交流被一个小姐姐伤心，都有点不相信爱情了。</div>
             </div>
             <span class="like">246</span>
             <span class="comment">23</span>
-
-        </div>
+            <hr>
         <div id="bbq-footer">查看更多</div>
     </div>
-    <div id="ad">
-        <img src="img/ad.jpg" alt="" width="480px">
-        <div id="ad-content">
-            <p>COCO CRUSH</p>
-            <br>
-            <p>CHANEL Ltd.</p>
+        <div id="ad">
+            <img src="img/ad.jpg" alt="" width="480px">
+            <div id="ad-content">
+                <p>COCO CRUSH</p>
+                <p>CHANEL Ltd.</p>
+            </div>
+            <div id="ad-icon">广告</div>
+            <div id="menu">
+                <span class="menu" id="menu-share">分享</span>
+                <span class="menu" id="menu-like">17</span>
+                <span class="menu" id="menu-comment">246</span>
+            </div>
         </div>
-        <div id="ad-icon">ad</div>
-        <div id="menu">
-            <span class="menu">分享</span>
-            <span class="menu">17</span>
-            <span class="menu">246</span>
+        <div id="friends">
+            <div id="friends-header">可能认识的人</div>
+            <hr>
+            <div class="friends" id="friends1">
+                <div class="face-fm"></div>
+                <div class="name">昵称不会取</div>
+                <div class="college">计算机学院</div>
+                <div class="to-follow">关注</div>
+            </div>
+            <div class="friends" id="friends2">
+                <div class="face-m"></div>
+                <div class="name">取什么名字呢</div>
+                <div class="college">文法学院</div>
+                <div class="to-follow">关注</div>
+            </div>
+            <div class="friends" id="friends3">
+                <div class="face-m"></div>
+                <div class="name">取这个名字吧</div>
+                <div class="college">外国语学院</div>
+                <div class="to-follow">关注</div>
+            </div>
+            <hr id="bottom-line">
+            <div id="friends-footer">查看更多</div>
         </div>
+        <div id="add-bb"></div>
     </div>
-    <div id="friends">
-        <div id="friends-header">可能认识的人</div>
-        <div class="friends">
-            <div class="face-fm"></div>
-            <div class="name">昵称不会取</div>
-            <div class="college">计算机学院</div>
-            <div class="follow"></div>
-        </div>
-        <div class="friends">
-            <div class="face-m"></div>
-            <div class="name">取什么名字呢</div>
-            <div class="college">文法学院</div>
-            <div class="follow"></div>
-        </div>
-        <div class="friends">
-            <div class="face-m"></div>
-            <div class="name">取这个名字吧</div>
-            <div class="college">外国语学院</div>
-            <div class="follow"></div>
-        </div>
-        <div id="friends-footer">查看更多</div>
-    </div>
+
 </div>
 </body>
 </html>
